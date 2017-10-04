@@ -38,9 +38,9 @@ public class StringByteLength {
 //
 //    1.整型
 //    类型              存储需求     bit数    取值范围      备注
-//    int               4字节       4*8
+//    int               4字节       4*8     -2147483648-2147483648
 //    short             2字节       2*8     －32768～32767
-//    long              8字节       8*8
+//    long              8字节       8*8     -9233372036854477808-9233372036854477808
 //    byte              1字节       1*8     －128～127
 //
 //    2.浮点型
@@ -54,5 +54,5 @@ public class StringByteLength {
 //
 //    4.boolean类型
 //    类型              存储需求     bit数      取值范围      备注
-//    boolean          1字节        1*8       false、true
+//    boolean          1字节        1*8       false、true   理论上占用1bit,1/8字节，实际处理按1byte处理
 

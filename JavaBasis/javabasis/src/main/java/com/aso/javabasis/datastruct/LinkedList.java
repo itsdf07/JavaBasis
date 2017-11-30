@@ -1,6 +1,7 @@
 package com.aso.javabasis.datastruct;
 
 /**
+ * 双向链表
  * Created by itsdf07 on 2017/11/5 20:30.
  * E-Mail: 923255742@qq.com
  * GitHub: https://github.com/itsdf07
@@ -70,13 +71,10 @@ public class LinkedList<E> {
      */
     public void remove(int index) {
         Node<E> target = node(index);
-        System.out.println(target.item);
         unLinkNode(target);
     }
 
     private void unLinkNode(Node<E> p) {
-//        p.prev.next = p.next;
-//        p.next.prev = p.prev;
 
         Node<E> pre = p.prev;
         Node<E> next = p.next;
@@ -86,7 +84,7 @@ public class LinkedList<E> {
         } else {
             pre.next = p.next;
         }
-        //删除与删除尾节点
+        //等价与删除尾节点
         if (next == null) {
             last = p.prev;
         } else {
